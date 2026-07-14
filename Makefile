@@ -1,5 +1,5 @@
 CXX := g++
-TARGET := mediaplayer
+TARGET := sizefile
 BINDIR := .
 
 PREFIX  := /usr/local
