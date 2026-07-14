@@ -1,5 +1,4 @@
 #include "libutils/libutils.hpp"
-#include <cstdint>
 
 const std::string VERSION = "0.4";
 
@@ -15,7 +14,6 @@ int main(int argc, char *argv[]) {
 
   if (parser.hasFlag("-v")) {
     std::cout << "sizefile version " << VERSION << std::endl;
-    return 0;
   }
 
   for (int i = 1; i < argc; i++) {
