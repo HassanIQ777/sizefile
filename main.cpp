@@ -1,4 +1,5 @@
 #include "libutils/libutils.hpp"
+#include <cstdint>
 
 const std::string VERSION = "0.4";
 
@@ -24,10 +25,9 @@ int main(int argc, char *argv[]) {
       continue;
     }
 
-    float filesize = File::getfilesize(filename); // bytes
+    uintmax_t filesize = File::getfilesize(filename); // bytes
     std::string filesize_with_unit = numutils::bytes(filesize);
 
-    std::cout << "size of '" << filename << "' is " << filesize_with_unit
-              << std::endl;
+    std::cout << filename << ": " << filesize_with_unit << std::endl;
   }
 }
